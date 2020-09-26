@@ -5,14 +5,7 @@ import PropTypes from 'prop-types';
 const Form = () => {
   
   return (
-    <form>
-      <input
-        type="text"
-        id="todo-input"
-        placeholder="Ajouter une tâche"
-        autoComplete="off"
-      />
-    </form>
+    <div>TODO: Implémenter le Formulaire</div>
   );
 };
 
