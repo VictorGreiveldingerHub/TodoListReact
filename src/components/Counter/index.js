@@ -1,18 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-import './styles.scss';
-
-const Counter = ({ label }) => {
-  console.log('refresh de Counter');
-
+const Counter = () => {
   return (
-    <div id="todo-counter">{label}</div>
+    <div>TODO: Implémenter Counter</div>
   );
-};
-
-Counter.propTypes = {
-  label: PropTypes.string.isRequired,
 };
 
 export default Counter;

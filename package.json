@@ -50,5 +50,11 @@
     "prop-types": "*",
     "react": "*",
     "react-dom": "*"
-  }
+  },
+  "version": "1.0.0",
+  "description": "My React TodoList",
+  "main": "index.js",
+  "repository": "git@github.com:VictorGreiveldingerHub/TodoListReact.git",
+  "author": "Victor Greiveldinger",
+  "license": "MIT"
 }
