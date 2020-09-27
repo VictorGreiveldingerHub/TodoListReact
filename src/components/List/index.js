@@ -1,10 +1,39 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
+import 'src/components/List/styles.scss';
 
 const List = () => {
+
   return (
-    <ul>
-      <li>TODO: Liste</li>
+    <ul className="todo-list">
+        <li>
+            <input 
+                className="todo"
+                type="checkbox" 
+            />
+            <span> Voici une chose à faire</span>
+        </li>
+        <li>
+            <input 
+                className="todo"
+                type="checkbox" 
+            />
+            <span> Voici une chose à faire</span>
+        </li>
+        <li>
+            <input 
+                className="todo"
+                type="checkbox" 
+            />
+            <span> Voici une chose à faire</span>
+        </li>
+        <li>
+            <input 
+                className="todo"
+                type="checkbox" 
+            />
+            <span> Voici une chose à faire</span>
+        </li>
     </ul>
   );
 };
