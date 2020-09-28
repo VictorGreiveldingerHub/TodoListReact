@@ -4,7 +4,7 @@ import 'src/components/Counter/styles.scss';
 
 const Counter = () => {
   return (
-    <div className="todo-counter">3 tâches sont à faire</div>
+    <div id="todo-counter">4 tâches sont à faire</div>
   );
 };
 

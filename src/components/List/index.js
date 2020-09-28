@@ -6,33 +6,41 @@ const List = () => {
 
   return (
     <ul className="todo-list">
-        <li>
-            <input 
-                className="todo"
+        <li className="todo">
+            <input
+                className="todo-check"
                 type="checkbox" 
             />
-            <span> Voici une chose à faire</span>
+            <span className="todo-text">
+                Faire une TodoList en React
+            </span>
         </li>
-        <li>
-            <input 
-                className="todo"
+        <li className="todo">
+            <input
+                className="todo-check"
                 type="checkbox" 
             />
-            <span> Voici une chose à faire</span>
+             <span className="todo-text">
+                Faire un CV + pseudo portfolio
+            </span>
         </li>
-        <li>
-            <input 
-                className="todo"
-                type="checkbox" 
+        <li className="todo">
+            <input
+                type="checkbox"
+                className="todo-check"
             />
-            <span> Voici une chose à faire</span>
+            <span className="todo-text">
+                Trouver un travail
+            </span>
         </li>
-        <li>
-            <input 
-                className="todo"
-                type="checkbox" 
+        <li className="todo">
+            <input
+                type="checkbox"
+                className="todo-check"
             />
-            <span> Voici une chose à faire</span>
+            <span className="todo-text">
+            Acheter un nouveau mac
+            </span>
         </li>
     </ul>
   );
