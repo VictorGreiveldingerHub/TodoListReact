@@ -1,52 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import 'src/components/List/styles.scss';
 
-const List = () => {
+const List = ({handleCheckboxChange, tasks} ) => {
+// On récupère la data grâce aux props
 
-  return (
+// On map sur les tâches pour retourner une liste
+const taskJSX = tasks.map(task => {
+    let taskClassNames = 'todo';
+    if (task.done) taskClassNames += ' todo--done';
+
+    return (
+    <li key={task.id} className={taskClassNames}>
+        <input
+          className="todo-check"
+          type="checkbox"
+          onChange={ () => { handleCheckboxChange(task.id)}}
+          checked={task.done}
+        />
+        <span className="todo-text">{task.text}</span>
+    </li>
+    );
+});
+
+return (
     <ul className="todo-list">
-        <li className="todo">
-            <input
-                className="todo-check"
-                type="checkbox" 
-            />
-            <span className="todo-text">
-                Faire une TodoList en React
-            </span>
-        </li>
-        <li className="todo">
-            <input
-                className="todo-check"
-                type="checkbox" 
-            />
-             <span className="todo-text">
-                Faire un CV + pseudo portfolio
-            </span>
-        </li>
-        <li className="todo">
-            <input
-                type="checkbox"
-                className="todo-check"
-            />
-            <span className="todo-text">
-                Trouver un travail
-            </span>
-        </li>
-        <li className="todo">
-            <input
-                type="checkbox"
-                className="todo-check"
-            />
-            <span className="todo-text">
-            Acheter un nouveau mac
-            </span>
-        </li>
+        {taskJSX}
     </ul>
   );
 };
 
+// On vérifie les props ...
 List.propTypes = {
+    tasks: PropTypes.array.isRequired,
+    handleCheckboxChange: PropTypes.func.isRequired,
 };
 
 export default List;
