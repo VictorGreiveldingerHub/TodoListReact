@@ -1,10 +1,15 @@
 import React from 'react';
+import './styles.scss'; 
 
-import 'src/components/Counter/styles.scss'; 
+const Counter = ({nbCurrentTasks}) => {
+  
+  // const sentence = 'tâche';
+  // if (nbCurrentTasks > 1) {
+  //   sentence += 's';
+  // };
 
-const Counter = () => {
   return (
-    <div id="todo-counter">4 tâches sont à faire</div>
+    <div id="todo-counter">{nbCurrentTasks} à faire</div>
   );
 };
 

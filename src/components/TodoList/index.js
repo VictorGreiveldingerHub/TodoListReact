@@ -22,6 +22,11 @@ const TodoList = () => {
     setTasks(newTasks);
   };
 
+  const nbCurrentTasks = tasks.filter((task) => {
+    console.log(task.done);
+    return !task.done;
+  }).length;
+
   const addTask = () => {
     // Calcul d'un id pour la nouvelle tâche
     const taskIds = tasks.map((task) => task.id);
@@ -50,7 +55,7 @@ const TodoList = () => {
         addTask={addTask}
         updateText={setNewTaskText}
       />
-      <Counter />
+      <Counter nbCurrentTasks={nbCurrentTasks}/>
       <List
         handleCheckboxChange={handleCheckboxChange}
         tasks={tasks}
