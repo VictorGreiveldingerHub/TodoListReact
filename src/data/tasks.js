@@ -19,9 +19,4 @@ export default [
         text: 'Acheter un Volvo plutôt propre',
         done: false,
     },
-    {
-        id: 4,
-        text: 'Vivre',
-        done: true,
-    },
 ];

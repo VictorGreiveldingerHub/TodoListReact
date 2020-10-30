@@ -1,13 +1,11 @@
 // == Import npm
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
 // == Import
 import Form from 'src/components/Form';
 import Counter from 'src/components/Counter';
 import List from 'src/components/List';
-
-import initialTasks from 'src/data/tasks.js';
+import initialTasks from 'src/data/tasks';
 
 
 const TodoList = () => {
@@ -54,8 +52,8 @@ const TodoList = () => {
       />
       <Counter />
       <List
-        tasks={initialTasks}
-        onChange={handleCheckboxChange}
+        handleCheckboxChange={handleCheckboxChange}
+        tasks={tasks}
       />
     </div>
   );

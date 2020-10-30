@@ -16,7 +16,7 @@ const taskJSX = tasks.map(task => {
         <input
           className="todo-check"
           type="checkbox"
-          onChange={ () => { handleCheckboxChange(task.id)}}
+          onChange={() => {handleCheckboxChange(task.id)}}
           checked={task.done}
         />
         <span className="todo-text">{task.text}</span>
